@@ -1,0 +1,10 @@
+<h1>Movies</h1>
+<a ng-href="#/movies/new" ng-if="auth">Add</a>
+<ul>
+    <li ng-repeat="movie in movies">
+        {{movie.name}} ({{movie.year}}) by {{movie.director}}
+        <p>
+            {{movie.description}}
+        </p>
+    </li>
+</ul>

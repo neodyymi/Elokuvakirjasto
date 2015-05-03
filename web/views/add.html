@@ -1,0 +1,29 @@
+<form name="add">
+    <h1>Add a new movie</h1>
+    <p/>
+    <label>Name:</label>
+    <input name="name" type="text" ng-model="name" required>
+    <div ng-show="add.$submitted || add.name.$touched">
+        <div ng-show="add.name.$invalid">Name required!</div>
+    </div>
+    <p/>
+    <label>Year:</label>
+    <input name="year" type="text" ng-model="year" required>
+    <div ng-show="add.$submitted || add.year.$touched">
+        <div ng-show="add.year.$invalid">Year required!</div>
+    </div>
+    <p/>
+    <label>Director:</label>
+    <input name="director" type="text" ng-model="director" required>
+    <div ng-show="add.$submitted || add.director.$touched">
+        <div ng-show="add.director.$invalid">Director required!</div>
+    </div>
+    <p/>
+    <label>Description:</label>
+    <input name="description" type="text" ng-model="description" required>
+    <div ng-show="add.$submitted || add.description.$touched">
+        <div ng-show="add.description.$invalid">Description required!</div>
+    </div>
+    <p/>
+    <button type="submit" ng-click="addMovie()" ng-disabled="add.$invalid">Add</button>
+</form>
