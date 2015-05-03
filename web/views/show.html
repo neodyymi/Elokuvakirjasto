@@ -1,0 +1,4 @@
+<h1>{{movie.name}} ({{movie.year}})</h1>
+<p><b>Director:</b> {{movie.director}}</p>
+<p>{{movie.description}}</p>
+<a ng-href="#/movies/{{movie.$id}}/edit"><button>Edit</button></a> -- <a ng-click="removeMovie(movie)"><button>Remove</button></a>

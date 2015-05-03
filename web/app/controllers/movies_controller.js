@@ -2,6 +2,9 @@ MyApp.controller('MoviesController', function ($scope, FirebaseService, $locatio
     $scope.movies = FirebaseService.getMovies();
 
     $scope.addMovie = function () {
+        if($scope.name === "" || $scope.director === "" || $scope.year === "" || $scope.description === "") {
+            return;
+        };
         FirebaseService.addMovie($scope.name, $scope.director, $scope.year, $scope.description);
         $scope.name = '';
         $scope.director = '';
@@ -10,4 +13,6 @@ MyApp.controller('MoviesController', function ($scope, FirebaseService, $locatio
 
         $location.path('/movies');
     };
+    
+    
 })

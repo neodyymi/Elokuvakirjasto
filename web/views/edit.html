@@ -1,0 +1,30 @@
+<form name="add">
+    <h1>Edit {{movie.name}}</h1>
+    <p/>
+    <label>Name:</label>
+    <input name="name" type="text" ng-model="movie.name" required>
+    <div ng-show="edit.$submitted || edit.name.$touched">
+        <div ng-show="edit.name.$invalid">Name required!</div>
+    </div>
+    <p/>
+    <label>Director:</label>
+    <input name="director" type="text" ng-model="movie.director" required>
+    <div ng-show="edit.$submitted || edit.director.$touched">
+        <div ng-show="edit.director.$invalid">Director required!</div>
+    </div>
+    <p/>
+    <label>Year:</label>
+    <input name="year" type="text" ng-model="movie.year" ng-pattern="/^\d+$/" required>
+    <div ng-show="edit.$submitted || edit.year.$touched">
+        <div ng-show="edit.year.$invalid">Year must be a valid integer!</div>
+    </div>
+    <p/>
+    <label>Description:</label>
+    <input name="description" type="text" ng-model="movie.description" required>
+    <div ng-show="edit.$submitted || edit.description.$touched">
+        <div ng-show="edit.description.$invalid">Description required!</div>
+    </div>
+    <p/>
+    <button type="submit" ng-click="editMovie(movie)" ng-disabled="edit.$invalid">Edit</button>
+    <a ng-href="#/movies/{{movie.$id}}">Back</a>
+</form>

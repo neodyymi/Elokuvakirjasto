@@ -2,7 +2,7 @@
 <a ng-href="#/movies/new" ng-if="auth">Add</a>
 <ul>
     <li ng-repeat="movie in movies">
-        {{movie.name}} ({{movie.year}}) by {{movie.director}}
+        <a ng-href="#/movies/{{movie.$id}}">{{movie.name}}</a> ({{movie.year}}) by {{movie.director}}
         <p>
             {{movie.description}}
         </p>

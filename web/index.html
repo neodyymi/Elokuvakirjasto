@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Elokuvakirjasto</title>
-  </head>
-  <body ng-app="MyApp">
-    <h1>Hello, world!</h1>
-    
-    <p>Muutos index.html tiedostoon</p>
-    
-    <div ng-view></div>
-    
-    
-    <!-- Hyödyllisiä kirjastoja -->
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="bower_components/firebase/firebase.js"></script>
-    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Elokuvakirjasto</title>
+    </head>
+    <body ng-app="MyApp">
+        <a ng-href="#/movies">Movies</a> -- <a ng-href="#/movies/new">Add a movie</a>
+        <div ng-view></div>
 
-    <!-- Linkitä omat tiedostosi tähän (huomaa, että polun juuri on web-kansio!) -->
-    <script src="app/app.js"></script>    
-    <script src="app/controllers/movies_controller.js"></script>
-  </body>
+        <!-- Hyödyllisiä kirjastoja -->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/firebase/firebase.js"></script>
+        <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+
+        <!-- Linkitä omat tiedostosi tähän (huomaa, että polun juuri on web-kansio!) -->
+        <script src="app/app.js"></script>    
+        <script src="app/controllers/movies_controller.js"></script>
+        <script src="app/controllers/movie_controller.js"></script>
+    </body>
 </html>
