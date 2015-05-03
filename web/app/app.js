@@ -1,5 +1,5 @@
 // Toteuta moduulisi tänne
-var MyApp = angular.module('MyApp', ['ngRoute', 'firebase']);
+var MyApp = angular.module('MyApp', ['firebase', 'ngRoute']);
 
 MyApp.service('FirebaseService', function ($firebase) {
     var firebaseRef = new Firebase('https://fiery-fire-3593.firebaseio.com/movies')
